@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const fs = require('fs');
-var cron = require('node-cron');
+// var cron = require('node-cron');
 
 function WINRATE() {
     let winrate = Math.floor(Math.random() * 101);
