@@ -1395,6 +1395,8 @@ function updategame() {
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
     updategame()
     res.send('API HAS BEEN UPDATE');
 });
