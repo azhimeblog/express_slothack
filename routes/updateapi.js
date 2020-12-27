@@ -1363,6 +1363,27 @@ var gamepgdata = JSON.stringify(gamepg);
 var gamejokerdata = JSON.stringify(gamejoker);
 var gamesgdata = JSON.stringify(gamesg);
 
+
+function deloldgame() {
+    fs.unlink('./public/json/gamefc.json', function(err) {
+        if (err) throw err;
+        console.log('File deleted!');
+    });
+    fs.unlink('./public/json/gamepg.json', function(err) {
+        if (err) throw err;
+        console.log('File deleted!');
+    });
+    fs.unlink('./public/json/gamejoker.json', function(err) {
+        if (err) throw err;
+        console.log('File deleted!');
+    });
+    fs.unlink('./public/json/gamesg.json', function(err) {
+        if (err) throw err;
+        console.log('File deleted!');
+    });
+}
+
+
 function updategame() {
     fs.writeFile('./public/json/gamefc.json', gamefcdata, (err) => {
         if (err) {
@@ -1395,6 +1416,7 @@ function updategame() {
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+    deloldgame()
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     updategame()
