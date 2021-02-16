@@ -4,7 +4,7 @@ const fs = require('fs');
 // var cron = require('node-cron');
 
 function WINRATE() {
-    let winrate = Math.floor(Math.random() * 101);
+    let winrate = Math.floor(Math.random() * (100 - 60 + 1) + 60);
     return winrate
 }
 
