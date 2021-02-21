@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
-    fs.readFile('/app/public/json/gamejoker.jsonn', (err, data) => {
+    fs.readFile('/app/public/json/gamejoker.json', (err, data) => {
         if (err) throw err;
         let cheat = JSON.parse(data);
         res.send(cheat);
