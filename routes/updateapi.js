@@ -1365,19 +1365,19 @@ var gamesgdata = JSON.stringify(gamesg);
 
 
 function deloldgame() {
-    fs.unlink('./public/json/gamefc.json', function(err) {
+    fs.unlink('/app/public/json/gamefc.json', function(err) {
         if (err) throw err;
         console.log('File deleted!');
     });
-    fs.unlink('./public/json/gamepg.json', function(err) {
+    fs.unlink('/app/public/json/gamepg.json', function(err) {
         if (err) throw err;
         console.log('File deleted!');
     });
-    fs.unlink('./public/json/gamejoker.json', function(err) {
+    fs.unlink('/app/public/json/gamejoker.json', function(err) {
         if (err) throw err;
         console.log('File deleted!');
     });
-    fs.unlink('./public/json/gamesg.json', function(err) {
+    fs.unlink('/app/public/json/gamesg.json', function(err) {
         if (err) throw err;
         console.log('File deleted!');
     });
@@ -1385,28 +1385,28 @@ function deloldgame() {
 
 
 function updategame() {
-    fs.writeFile('./public/json/gamefc.json', gamefcdata, (err) => {
+    fs.writeFile('/app/public/json/gamefc.json', gamefcdata, (err) => {
         if (err) {
             throw err;
         }
         console.log("GAMEFC HACKING data is done.");
     });
 
-    fs.writeFile('./public/json/gamepg.json', gamepgdata, (err) => {
+    fs.writeFile('/app/public/json/gamepg.json', gamepgdata, (err) => {
         if (err) {
             throw err;
         }
         console.log("GAMEPG HACKING data is done.");
     });
 
-    fs.writeFile('./public/json/gamejoker.json', gamejokerdata, (err) => {
+    fs.writeFile('/app/public/json/gamejoker.json', gamejokerdata, (err) => {
         if (err) {
             throw err;
         }
         console.log("GAMEJOKER HACKING data is done.");
     });
 
-    fs.writeFile('./public/json/gamesg.json', gamesgdata, (err) => {
+    fs.writeFile('/app/public/json/gamesg.json', gamesgdata, (err) => {
         if (err) {
             throw err;
         }
